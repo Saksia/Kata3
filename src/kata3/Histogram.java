@@ -1,16 +1,20 @@
 package kata3;
-
-import java.util.HashMap;
-import java.util.Set;
+import java.util.*;
 
 public class Histogram <T> {
-    private final HashMap <T, Integer> map = new HashMap<>();
 
-    public Integer get(Object key){
-        return map.get(key):
+    private final Map <T,Integer> histogram = new HashMap <>();
+    
+    public Integer get(Object key) {
+        return histogram.get(key);
     }
 
-    public Set<T> keySet(){
-        return map.keySet();
+    public Set<T> keySet() {
+        return histogram.keySet();
     }
+
+    public void increment (String key) {
+        histogram.put((T) key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
+    }
+    
 }
