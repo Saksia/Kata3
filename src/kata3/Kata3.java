@@ -18,7 +18,6 @@ public class Kata3 {
         } catch (Exception e) {
             System.out.println("El fichero no existe");
         }
-        
         HistogramDisplay histoDisplay = new HistogramDisplay(histo);
         histoDisplay.execute();
     }
